@@ -1,0 +1,30 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe 生成活动文件",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                //"${workspaceFolder}\\*.cpp",//当前文件夹下所有.cpp文件均编译
+                "${file}",//只编译当前文件
+                "-o",
+                //"${fileDirname}\\a.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"//在当前目录下，保存生成文件为源代码名.exe
+            ],
+            "options": {
+                "cwd": "C:\\msys64\\ucrt64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "调试器生成的任务。"
+        }
+    ],
+    "version": "2.0.0"
+}
